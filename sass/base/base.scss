@@ -1,0 +1,31 @@
+*{
+   margin:0;
+   padding:0;
+}
+
+html{
+   font-size: 62.5%;
+   text-shadow: 0 0 .5rem rgba(0, 0, 0, .8);
+   margin:2rem;
+   background-color: rgb(240, 240, 240);
+
+   @include respond(small-desktop){
+      font-size: 55%;
+   }
+
+   @include respond(tab-land){
+      margin:0;
+      font-size: 42%;
+   }
+
+   @include respond(phone){
+      font-size: 35%;
+   }
+
+   @include respond(phone-small){
+      font-size: 32%;
+   }
+}
+body{
+   background-color: white;
+}

@@ -1,0 +1,73 @@
+.intro{
+   height: 44rem;
+   background-image: linear-gradient(to right,
+   rgba(61, 61, 61, 1) 0%,
+   rgba(61, 61, 61, 1) 40%,
+   rgba($primary-blue-dark, .6) 40%,
+   rgba($primary-blue-light, 0) 100%),
+   url(../images/intro.PNG);
+   background-position: center;
+   background-size: cover;
+   border-radius: 6px;
+   box-shadow: 1.5rem 1.5rem 3rem rgba(0, 0, 0, .4);
+
+   @include respond(tab-port){
+      position: relative;
+      height: 60rem;
+      background-image: linear-gradient(178deg,
+      rgba(61, 61, 61, 1) 0%,
+      rgba(61, 61, 61, 1) 50.5%,
+      rgba($primary-blue-dark, .6) 51%,
+      rgba($primary-blue-light, 0) 100%),
+      url(../images/intro.PNG);
+   }
+
+   @include respond(phone){
+      height: 85rem;
+   }
+
+   @include respond(phone-tiny){
+      margin-top: 2rem;
+   }
+
+   &__text{
+      width:34%;
+      display: block;
+      float:left;
+      color: $text-color-light;
+      text-align: justify;
+      font-size: 2.1rem;
+      font-weight: 200;
+      padding:3rem 0 3.5rem 4rem;
+
+      @include respond(tab-port){
+         padding: 2.5rem 0 0 0;
+         position:absolute;
+         text-align: justify;
+         width:80%;
+         float: 0;
+         left:50%;
+         transform: translate(-50%, 0);
+      }
+
+      @include respond(phone){
+         font-size:2.5rem;
+      }
+
+      @include respond(phone-tiny){
+         font-size: 2.3rem;
+      }
+   }
+
+   &__img{
+      background-image: url(../images/intro.PNG);
+   }
+}
+
+.col-1-of-4--mod{
+   width:calc(100% / 4);
+}
+
+.col-3-of-4--mod{
+   width:calc(3 * (100% / 4));
+}

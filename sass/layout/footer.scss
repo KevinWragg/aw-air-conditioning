@@ -1,0 +1,106 @@
+.footer{
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   height: 40rem;
+   background-color: rgba(51, 51, 51, 1);
+   line-height: 25px;
+
+
+   @include respond(tab-land){
+      height: 50rem;
+   }
+
+   @include respond(tab-port){
+      height: 70rem;
+   }
+
+   & .row{
+      margin-bottom:0 !important;
+
+   }
+
+   &__contact{
+      text-align: center;
+      color: $text-color-light;
+      padding-top: 8rem;
+      width: 50%;
+      display: block;
+      float: left;
+      width: 50%;
+      display: block;
+      float: left;
+
+      @include respond(tab-port){
+         width: 100%;
+      }
+
+      @include respond(tab-port){
+         padding-top: 5rem;
+      }
+   }
+
+   &__rule{
+
+      &-left{
+      margin:0 auto;
+      width: 45rem;
+      border-color: rgba(151, 151, 151, .8);
+
+         @include respond(phone-small){
+            width: 40rem;
+         }
+      }
+
+      &-right{
+         margin:0 auto;
+         width: 60rem;
+         border-color: rgba(151, 151, 151, .8);
+
+         @include respond(phone-small){
+            width: 50rem;
+         }
+      }
+   }
+
+   &__contact-text{
+      padding: 2rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+   }
+
+   &__hours{
+      color: $text-color-light;
+      padding-top: 8rem;
+      width: 50%;
+      display: block;
+      float: right;
+
+      @include respond(tab-port){
+         padding-top: 5rem;
+         width: 100%;
+      }
+
+      &-text{
+         text-align: center;
+         padding: 2rem;
+         font-size: 1.5rem;
+         font-weight: 300;
+      }
+   }
+
+   &__copyright{
+      margin-top: 6rem;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      transform: translate(-50%, 0);
+
+      &-text{
+         color: $text-color-light;
+         font-size: 1.2rem;
+         font-weight: 300;
+      }
+   }
+}
