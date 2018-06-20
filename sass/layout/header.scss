@@ -4,8 +4,7 @@
    height: 18rem;
    background-image: linear-gradient(140deg,
    rgba($primary-blue-dark, 1),
-   rgba($primary-blue-light, 1)),
-   url(../images/header.PNG);
+   rgba($primary-blue-light, 1));
    background-position: center;
    background-size: cover;
    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -32,12 +31,16 @@
    &__img{
       position:relative;
       height:100%;
-      background-image: url(../images/header-img.PNG);
+      background-image: url(../images/header-large.jpg);
       background-position: center;
       background-size: cover;
       top: -4rem;
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px;
+
+      @include respond(tab-port){
+         background-image: url(../images/header-small.jpg);
+      }
    }
 
    &__title{
@@ -46,28 +49,17 @@
       left:1.5%;
 
       &-text{
-
-         // color: orangered;
-         // -webkit-text-fill-color: transparent;
-         // background: -webkit-linear-gradient(to bottom, rgb(100, 0, 100), rgb(0, 0, 150));
-         // background: -o-linear-gradient(to bottom, rgb(100, 0, 100), rgb(0, 0, 150));
-         // -webkit-background-clip: text;
-         background-image: linear-gradient(to bottom, rgb(100, 0, 100), rgb(0, 0, 150));
-         -webkit-background-clip:text;
-         background-clip:text;
-         color: transparent;
+         color: $tertiary-blue-light;
          font-size: 4.5rem;
-         font-weight: 400;
-         text-shadow: 0rem 0rem 1.3rem rgba(200, 200, 200, .5);
+         font-weight: 200;
+         text-shadow: .2rem .2rem .4rem rgba(0, 0, 0, .7);
          line-height: 1.4;
 
          &--sub{
             font-size: 3.5rem;
-            background-image: linear-gradient(to bottom, rgb(100, 0, 180), rgb(0, 0, 130));
-            -webkit-background-clip:text;
-            color: transparent;
-            font-weight: 300;
-            text-shadow: 0rem .1rem 1.2rem rgba(200, 200, 200, .5);
+            color: $tertiary-blue-light;
+            font-weight: 200;
+            text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .7);
             line-height: 1.4;
          }
       }

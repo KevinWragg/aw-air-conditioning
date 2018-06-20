@@ -13,15 +13,6 @@ function adjustIntro(){
    }
 }
 
-function adjustServicesRow(){
-   if(window.innerWidth <= 900){
-      servicesRow.classList.remove("row");
-   }
-   else{
-      servicesRow.classList.add("row");
-   }
-}
-
 function adjustServicesCol(){
    for(i = 0; i < servicesCol.length; i++){
       if(window.innerWidth <= 900){
@@ -45,6 +36,4 @@ function adjustFooterRow(){
 
 
 setInterval(adjustIntro, 50);
-setInterval(adjustServicesCol, 50);
-setInterval(adjustServicesRow, 50);
 setInterval(adjustFooterRow, 50);

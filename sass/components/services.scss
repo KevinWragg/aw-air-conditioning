@@ -15,10 +15,11 @@
 
    @include respond(tab-port){
       margin-top: 4rem;
-      height: 160rem;
+      height: 175rem;
    }
 
    &__installation{
+      height: 38rem;
       letter-spacing: 2px;
       padding: 3rem 3rem 7rem 3rem;
       border-radius: 6px;
@@ -28,7 +29,7 @@
       rgba($primary-blue-dark, .6) 32%,
       rgba(61, 61, 61, 1) 32%,
       rgba(61, 61, 61, 1) 100%),
-      url(../images/header-small.png);
+      url(../images/installation-large.jpg);
       background-position: center;
       background-size: cover;
       transition: all .3s;
@@ -37,7 +38,7 @@
          font-size: 3rem;
          margin:0 auto;
          width: 45%;
-         height: 35rem;
+         height: 40rem;
          padding-bottom: 12rem;
          margin-bottom: 6rem;
       }
@@ -49,6 +50,7 @@
    }
 
    &__maintainence{
+      height: 38rem;
       letter-spacing: 2px;
       padding: 3rem 3rem 7rem 3rem;
       border-radius: 6px;
@@ -58,7 +60,7 @@
       rgba($primary-blue-dark, .6) 32%,
       rgba(61, 61, 61, 1) 32%,
       rgba(61, 61, 61, 1) 100%),
-      url(../images/maintainence.PNG);
+      url(../images/maintainence-large.jpg);
       background-position: center;
       background-size:cover;
       transition: all .3s;
@@ -66,7 +68,7 @@
       @include respond(tab-port){
          margin:0 auto;
          width: 45%;
-         height: 35rem;
+         height: 40rem;
          padding-bottom: 12rem;
          margin-bottom: 6rem;
       }
@@ -78,6 +80,7 @@
    }
 
    &__servicing{
+      height: 38rem;
       letter-spacing: 2px;
       padding: 3rem 3rem 7rem 3rem;
       border-radius: 6px;
@@ -87,7 +90,7 @@
       rgba($primary-blue-dark, .6) 32%,
       rgba(61, 61, 61, 1) 32%,
       rgba(61, 61, 61, 1) 100%),
-      url(../images/servicing.PNG);
+      url(../images/servicing-large.jpg);
       background-position: center;
       background-size: cover;
       transition: all .3s;
@@ -95,7 +98,7 @@
       @include respond(tab-port){
          margin:0 auto;
          width: 45%;
-         height: 35rem;
+         height: 40rem;
          padding-bottom: 12rem;
          margin-bottom: 6rem;
       }
@@ -107,18 +110,23 @@
    }
 
    &__heading{
-      padding-top: 2.5rem;
+      padding-top: 2rem;
       text-align:justify;
       font-size: 2.8rem;
       text-align: center;
       text-transform: uppercase;
 
+      @include respond(tab-port){
+         padding-top: 4rem;
+      }
+
       &-sub{
          position: relative;
          padding-bottom: 7rem;
-         top: 6rem;
+         top: 20%;
 
          @include respond(tab-port){
+            padding-top: 2.5rem;
             padding-top: 4rem;
             padding-bottom: 4rem;
          }
@@ -131,8 +139,11 @@
          & > h4{
             letter-spacing: 1px;
             font-weight: 200;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
 
+            @include respond(phone){
+               font-size: 2rem;
+            }
          }
       }
    }

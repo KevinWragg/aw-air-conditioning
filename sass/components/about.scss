@@ -7,7 +7,7 @@
    rgba($primary-blue-dark, .95) 47%,
    rgba(61, 61, 61, 1) 47%,
    rgba(61, 61, 61, 1) 100%),
-   url(../images/header-small.png);
+   url(../images/about-large.jpg);
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -15,18 +15,18 @@
    box-shadow: 1.5rem 1.5rem 3rem rgba(0, 0, 0, .4);
 
    @include respond(tab-port){
-      padding: 0 0 10rem 0;
+      padding: 0 0 5rem 0;
       height:70rem;
       background-image: linear-gradient(178deg,
       rgba($primary-blue-light, .6) 0%,
       rgba($primary-blue-dark, .95) 49.8%,
       rgba(61, 61, 61, 1) 50%,
       rgba(61, 61, 61, 1) 100%),
-      url(../images/header-tab-phone.png);
+      url(../images/about-small.jpg);
    }
 
    @include respond(phone){
-      height:80rem;
+      height:500px;
    }
 
    &__list{
@@ -45,6 +45,10 @@
 
       @include respond(tab-port){
          width:100%;
+      }
+
+      @include respond(phone){
+         height: 220px;
       }
 
       &-box{
@@ -73,12 +77,12 @@
 
       @include respond(tab-port){
          width:100%;
-         padding-top: 8rem;
+         padding-top: 4rem;
       }
 
       @include respond(phone){
          width:100%;
-         padding-top: 16rem;
+         padding-top: 8rem;
       }
 
       &-box{
@@ -90,6 +94,14 @@
             height:20rem;
          }
 
+         @include respond(phone){
+            height:130px;
+         }
+
+         @include respond(phone-tiny){
+            height:150px;
+         }
+
       }
    }
 
@@ -97,19 +109,23 @@
       display:block;
       padding: 0;
       text-align: center;
-      transition: all .2s;
+      backface-visibility: hidden;
+      transition: all .3s;
+
+      @include respond(phone){
+         padding-top: 4rem;
+      }
 
       &:hover{
-         transform: skewY(-2deg) skewX(-4deg) translate(0, -.5rem);
-         text-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .5);
+         transform: skewY(-2deg) skewX(-6deg);
+         text-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .8);
       }
 
 
       &-text{
+         font-weight: 200;
          font-size: 2.5rem;
-         background-image: linear-gradient(to right bottom, $primary-blue-dark, $primary-blue-dark);
-         -webkit-background-clip:text;
-         color: transparent;
+         color: $tertiary-blue-light;
 
          @include respond(tab-port){
             font-size: 2.1rem;

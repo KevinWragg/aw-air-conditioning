@@ -12,7 +12,11 @@
    }
 
    @include respond(tab-port){
-      height: 70rem;
+      height: 65rem;
+   }
+
+   @include respond(phone){
+      height: 420px;
    }
 
    & .row{
